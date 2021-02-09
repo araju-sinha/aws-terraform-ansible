@@ -1,0 +1,20 @@
+terraform------
+
+
+
+
+
+----------ansible----------------
+/etc/ansible/hosts
+
+
+[webservers]
+
+ubuntu@public_web_ip ansible_ssh_private_key_file=~/.ssh/yourKeyPair
+
+[jenkins]
+
+ubuntu@public_jenkins_ip ansible_ssh_private_key_file=~/.ssh/yourKeyPair.pem
+
+
+ansible-playbook provision_jenkins.yaml
